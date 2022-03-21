@@ -1,12 +1,27 @@
-import React from 'react'
+import {
+    BadgeCheckIcon,
+    CollectionIcon,
+    HomeIcon,
+    LightningBoltIcon,
+    SearchIcon,
+    UserIcon
+} from "@heroicons/react/outline"
 import Image from 'next/image'
+import HeaderItem from './HeaderItem'
 
 function Header() {
     return (
-        <div className='header'>
-            <h1>this is header</h1>
-            <Image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAjVBMVEUAAAAA6WkA8GwDzV0A7WwGrlAEQh8DdTQGeDoE42YDAwYFAAAH0WAGtVIHxlsA7GkFqk8GgDoGTyUEpEoI12IFOxwECAYEZzAKiEEGoEsHjEAHRyMIlUUGslIGXywIWiwEMxkA9m4I3GQKcDYHSyMEEgwIw1oIKBUELhcGulQGGw8EEwwIXC0GIRIGMRdjlZBBAAAEWklEQVR4nO2d23baOhBALSHSUANOAgRIoSVuQ0N6+f/Pa07S0xVLI1cjiEkXez/CoBm2L9iSJYoCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABOijLppaPwVur4w2zaCxhfH7uqZ+bDoLTh6JgGz6wzHm7w/ogFveCd9UszbnhcWUFB5g3LMj1kySBLAbIUIEsBshQgSwGyFCBLAbIUIEsBshQgSwGyFCBLAbIUIEsBshQgSwGyFCBLAbIUIEsBshQcWNb+mkVZZXl1ubzoN7lY3sw//CXhat33WX+UK/ebf2Q0a8akyFqGzaw/iRmvhYzrTaKmZyRZZmSsrVyAtdb0Vh9aWhvb8EOXYmQ5CNu/vWrGpMiaCs2cixmvjRB6plAVkVUJr/3/lrP1Irp/jcNPRmWFbdsMWcPg6QNjZVnvpYwHkNWOs4OYLmQJ2KmcBVkSlRMrQpbM7Q2y0pEsICuGDS8ikBWjCp/CQ1aUsCpkRXE1stKx/l0YsuLYCbLS8Y9DZLVw600vQFYL1uusOlVZrmoQkeWZOE1Ztl5PXjKWdVVLZBkbdFjNelKg6zejTlGW/Sx8O0GEcaNm0AnKcmsxWVhWEHmCsuwXMbQf1sWeZcydGHopTP9DVmSQ9RxZyEoHWQqQpQBZCpClAFkKkKUAWQqQpeD1ZS3ExrqXdf0PyPK7vH6zEfowDiTL75Fs+aZHlbWV+lPFNZOWQqTf25EiqydIH4iP2l1IGY8payftLzuh9rkQGJSeIkvqkqykdaPmYi/nLAxs4bCy1qKD8VevpfJGijP2Xi2rlDbP4/Z58DMu5LGGH0eUtRJLcnbcv3jBzkSGlL6pZYkH138Zt42Mo4GcUT5gO5IlhDxRNR8Ul4Nc7ZWeIiuyx5hGwiqWcahydWBZZ7dyVUm4nZcwRdb3fQaJ5cGGrmSVe1Ru7CpDVrnXgy3yBXNHsuRrh9TS/XGSpLk7vX0y6n4MDy1LGNRIJThlpcm62SPjVOfq0LLusis3LrjwTpL1EDl5J2Clp9M7lFVM8h8Vv/fbSpJVrrOPQ6tdj/XQsr7mbugq/GVKm2+4yZUVPLfYuazsc4j1L7qTJ2cuc3dmeSy5S1nire3fkXpyEmWVw6x9K9KT062su0FG7XYr3HikTvu9Nxnbxwqldy+r2AzUtVdT6VybPEd6preVtUjzK8gq7mvlWcTV4t1/+oTyjXZvlrfOMWQV5ShcC7wFO5QrV8y+L3e6jHmT+F9FVlHM6+TinZW7gZVLFXxWZHSrvGULXklWUV5ObawvplG33Uan8+vWdSgXUxvri2lm3ClvCf+gWDxfkNX2k1JeTab2acmDSNXV47v1pKUXXLt4fvnpOWMs5dNiC/UyV5XqbxnmYegwdgT9rv5hvpjstmGGpyyj5btN6+GQ8bcM5Y+PjxnHcsbtaHX+c691Qzr4ww+xvYQkuXVEPvfm/j8EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA65xew6mrhPbwLbQAAAABJRU5ErkJggg==" height="40px" width="60px" />
+        <div className=''>
+            <div className="flex">
+                <HeaderItem title="HOME" Icon={HomeIcon} />
+                <HeaderItem title="TRENDING" Icon={LightningBoltIcon} />
+                <HeaderItem title="VERIFIED" Icon={BadgeCheckIcon} />
+                <HeaderItem title="COLLECTIONS" Icon={CollectionIcon} />
+                <HeaderItem title="SEARCH" Icon={SearchIcon} />
+                <HeaderItem title="ACCOUNT" Icon={UserIcon} />
+            </div>
 
+            <Image className='object-contain' src="https://links.papareact.com/ua6" height={100} width={200} />
         </div>
 
     )
